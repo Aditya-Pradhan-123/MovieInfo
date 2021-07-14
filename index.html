@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+              <img src="./images/logo.png" alt="">
+              <a href="">Reviewed</a>
+
+            </div>
+            
+            <img id="mobile-cta" class="mobile-menu" src="./images/Icon feather-menu.svg" alt="">
+  
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="./images/Icon ionic-md-close.svg" alt="">
+                <ul class="nav1">
+  
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#popular">Popular</a></li>
+                    <li><a href="#top">Top Rated</a></li>
+                    <li><a href="#trending">Trending</a></li>
+  
+                </ul>               
+            </nav>      
+        </div>
+    </div>
+    
+
+    <section class="home">
+        <div class="text">
+            <h1>Welcome to Reviewed, millions of Movies to Discover and Explore.</h1>
+            
+            <form>
+                <input type="search" placeholder="Search for movies..." class="valid" id="textBox">
+            </form>
+            
+        </div>
+    <div class="slider">
+        
+          <div class="slide first">
+            <img src="./images/home1.jpg" alt="">
+          </div>
+          
+      </div>
+   
+    </section>
+
+
+    <section class="about" id="about">
+      <div class="about-container">
+          <div class="about-info">
+              <div class="about-image">
+                  
+                  <img src="./images/about.jpg" alt="">
+              </div>
+              <div class="about-description">
+                  <h1>About Us</h1>
+                  <p class="about-para">Let's talk about our Website.</p>
+                  <p class="about-para2">Reviewed is a website made with the help of The Movie Database (TMDb) api.TMDB is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched. Put simply, they live and breathe community and that's precisely what makes them different.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+
+  <section class="full-movie-container">
+    <section class="search" id="search">
+      <div class="search-header-container">
+        <div class="search-header">
+          <div class="dash"></div>
+          <div class="header-info">
+            <h1>Search Results</h1>
+          </div>  
+        </div>
+        </div>
+      
+      <div class="container initial">
+          
+        <div class="search-result">
+   
+        </div>
+      </div>
+    </section> 
+
+
+
+
+    <section class="popular" id="popular">
+      <div class="popular-header-container">
+      <div class="popular-header">
+        <div class="dash"></div>
+        <div class="header-info">
+          <h1>What's Popular</h1> 
+        </div>        
+      </div>
+      </div>
+
+      <div class="para-container">
+        <div class="para-header">
+          <div class="para-header-info">
+            <h1>Discover and Explore the list of popular and latest movies.</h1> 
+          </div>        
+        </div>
+        </div>
+
+      <div class="popular-movie-container"> 
+        <div class="popular-movie-details">
+                        
+        </div>
+      </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="top" id="top">
+      <div class="top-header-container">
+      <div class="top-header">
+        <div class="dash"></div>
+        <div class="header-info">
+          <h1>Top Rated</h1>
+        </div>  
+      </div>
+      </div>
+
+      <div class="para-container">
+        <div class="para-header">
+          <div class="para-header-info">
+            <h1>Discover and Explore the list of Top-Rated and latest movies.</h1> 
+          </div>        
+        </div>
+        </div>
+
+      <div class="top-movie-container"> 
+        <div class="top-movie-details">
+          <!-- <div class="top-movies"> -->
+           <div class="top-inner-container">
+             <div class="image">
+               <img src="./images/banner3.jpg" alt="">
+              
+             </div>
+
+            <div class="movie-info-container">
+            <div class="movie-info">
+              <div class="movie-title">
+                <h1>Movie Name</h1>
+              </div>
+
+              <div class="movie-rating">
+                <p class="color">9.4</p>
+              </div>
+            </div>
+            </div> 
+
+            <div class="movie-descrip-container">
+              <div class="movie-descrip">
+                <div class="movie-date">
+                  <h1>Date</h1>
+                </div>
+  
+                <div class="movie-descrip-btn">
+                  <button href="" onclick="movieSelected()">Description</button>
+                </div>
+              </div>
+              </div> 
+             
+           </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </section>
+
+
+    <section class="now" id="now">
+
+      <div class="now-header-container">
+        <div class="now-header">
+          <div class="dash"></div>
+          <div class="header-info">
+            <h1>Now Playing</h1>
+          </div>  
+        </div>
+        </div>
+  
+        <div class="para-container">
+          <div class="para-header">
+            <div class="para-header-info">
+              <h1>Discover and Explore the list of new and upcoming movies.</h1> 
+            </div>        
+          </div>
+          </div>
+  
+        <div class="now-movie-container">           
+          <div class="now-movie-details">           
+            <div class="now-movies">
+             <div class="now-inner-container">
+               <div class="image">
+                 <img src="./images/banner3.jpg" alt="">
+               </div>               
+             </div>
+            </div>             
+          </div> 
+        </div>
+    </section>
+
+
+    <section class="trending" id="trending">
+      <div class="trending-header-container">
+      <div class="trending-header">
+        <div class="dash"></div>
+        <div class="header-info">
+          <h1>Trending</h1>
+        </div>  
+      </div>
+      </div>
+
+      <div class="para-container">
+        <div class="para-header">
+          <div class="para-header-info">
+            <h1>Discover and Explore the list of Trending and latest movies.</h1> 
+          </div>        
+        </div>
+        </div>
+
+      <div class="trending-movie-container"> 
+        <div class="trending-movie-details">
+          <div class="trending-movies">
+           <div class="trending-inner-container">
+             <div class="image">
+               <img src="./images/banner3.jpg" alt="">
+             </div>
+
+            <div class="movie-info-container">
+            <div class="movie-info">
+              <div class="movie-title">
+                <h1>Movie Name</h1>
+              </div>
+
+              <div class="movie-rating">
+                <p class="color">9.4</p>
+              </div>
+            </div>
+            </div> 
+
+            <div class="movie-descrip-container">
+              <div class="movie-descrip">
+                <div class="movie-date">
+                  <h1>Date</h1>
+                </div>
+  
+                <div class="movie-descrip-btn">
+                  <button href="" onclick="movieSelected()">Description</button>
+                </div>
+              </div>
+              </div> 
+             
+           </div>
+          </div>
+
+
+
+
+          <div class="trending-movies">
+            <div class="trending-inner-container">
+              <div class="image">
+                <img src="./images/banner3.jpg" alt="">
+              </div>
+ 
+             <div class="movie-info-container">
+             <div class="movie-info">
+               <div class="movie-title">
+                 <h1>Movie Name</h1>
+               </div>
+ 
+               <div class="movie-rating">
+                 <p class="color">9.4</p>
+               </div>
+             </div>
+             </div> 
+ 
+             <div class="movie-descrip-container">
+               <div class="movie-descrip">
+                 <div class="movie-date">
+                   <h1>Date</h1>
+                 </div>
+   
+                 <div class="movie-descrip-btn">
+                   <a href="" onclick="movieSelected()">Description</a>
+                 </div>
+               </div>
+               </div> 
+              
+            </div>
+           </div>
+
+
+           <div class="trending-movies">
+            <div class="trending-inner-container">
+              <div class="image">
+                <img src="./images/banner3.jpg" alt="">
+              </div>
+ 
+             <div class="movie-info-container">
+             <div class="movie-info">
+               <div class="movie-title">
+                 <h1>Movie Name</h1>
+               </div>
+ 
+               <div class="movie-rating">
+                 <p class="color">9.4</p>
+               </div>
+             </div>
+             </div> 
+ 
+             <div class="movie-descrip-container">
+               <div class="movie-descrip">
+                 <div class="movie-date">
+                   <h1>Date</h1>
+                 </div>
+   
+                 <div class="movie-descrip-btn">
+                   <button href="" onclick="movieSelected()">Description</button>
+                 </div>
+               </div>
+               </div> 
+              
+            </div>
+           </div>
+        </div>
+
+      </div>
+    </section>
+</section>  
+    <section class="check" id="check">
+      
+      <div class="check-container">
+      <div class="check-details">
+
+        <div class="check-info">
+          
+          <h1>Explore Most Popular Movies.</h1>
+          <div class="images1">
+            <div class="img1">
+              <img src="./images/check1.jpg" alt="">
+            </div>
+          </div>
+          
+          <p>Doesn't have any idea which movie to watch you can check our popular list, you can check the rating  on that list Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sunt!</p>
+          <a href="#popular">Explore Now</a>
+        </div>
+
+        <div class="images">
+          <div class="img1">
+            <img src="./images/check1.jpg" alt="">
+          </div>
+          <div class="img2">
+            <img src="./images/check2.jpg" alt="">
+            <img src="./images/banner3.jpg" alt="">
+          </div>
+         
+        </div>
+        
+      </div>
+    </div>
+
+    </section>
+
+
+    <section class="footer">
+
+      <div class="box-container">
+    
+          <div class="box">
+              <h3>Reviewed</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Optio rerum explicabo impedit aperiam non
+                  quod.Velit sunt voluptatem nemo beatae.</p>
+          </div>
+    
+          <div class="box">
+              <h3>Languages</h3>
+              <a href="#services">English</a>
+              <a href="#services">French</a>
+              <a href="#Services">Italian</a>
+              <a href="#services">Japanese</a>
+          </div>
+    
+          <div class="box">
+              <h3>Quick Links</h3>
+              <a href="#">Discover</a>
+              <a href="#popular">Popular</a>
+              <a href="#top">Top Rated</a>
+              <a href="#trending">Trending</a>
+              
+          </div>
+    
+    
+          <div class="box">
+              <h3>Contact Us</h3>
+              
+              <div class="icons">
+                  <img src="./images/facebook.png" alt="">
+                  <img src="./images/instagram.png" alt="">
+                  <img src="./images/twitter.png" alt="">
+              </div>
+          </div>
+    
+      </div>
+    
+    </section> 
+ 
+
+<script src="main.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
+
+</body>
+</html>
