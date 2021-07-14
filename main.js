@@ -144,7 +144,7 @@ const TOP_URL = 'https://api.themoviedb.org/3/movie/top_rated?api_key=ca3c400cea
 // const TOP_URL = BASE_URL + '/discover/movie/?with_genres=18&original_language=en&certification_country=US&sort_by=popularity.desc&' + API_KEY ;
 const TRENDING_URL = BASE_URL + '/discover/movie?with_genres=12&append_to_response=videos&sort_by=popularity.desc&adult=false&' + API_KEY;
 const searchURL = BASE_URL + '/search/movie?' + API_KEY;
-const NOW_PLAYING = 'http://api.themoviedb.org/3/movie/upcoming?api_key=ca3c400cea4be5c8b127037bc0d6c555'
+const NOW_PLAYING = 'https://api.themoviedb.org/3/movie/upcoming?api_key=ca3c400cea4be5c8b127037bc0d6c555'
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
